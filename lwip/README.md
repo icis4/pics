@@ -38,3 +38,19 @@ https://github.com/Tenkiv/Tekdaqc-Firmware/blob/master/Tekdaqc_Libraries_Firmwar
 
 http://www.vxibus.org/files/VXI_Specs/VXI-1_4-0%2020100527.pdf
 
+## HTTPD
+
+https://www.svgbackgrounds.com/#protruding-squares
+
+http://elm-chan.org/fsw/ff/res/app2.c
+
+https://www.programmersought.com/article/30076184495/
+
+https://lwip.fandom.com/wiki/Tuning_TCP
+
+https://lwip.fandom.com/wiki/Maximizing_throughput
+
+https://www.w3schools.com/bootstrap/default.asp
+
+https://www.w3schools.com/bootstrap/bootstrap_templates.asp
+
