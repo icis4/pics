@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# File name
+DEB_FILE="google-chrome-stable_current_amd64.deb"
+
+echo "--- Step 1: Download Google Chrome ---"
+wget https://dl.google.com/linux/direct/$DEB_FILE
+
+if [ -f "$DEB_FILE" ]; then
+    echo "--- Step 2: Install (admin password needed) ---"
+    # Using apt install ./file, to download & install missing dependencies
+    sudo apt install ./$DEB_FILE -y
+
+    echo "--- Step 3: cleanup ---"
+    rm $DEB_FILE
+
+    echo "✅ Ready! Google Chrome is installed."
+else
+    echo "❌ Download error. Check internet connection."
+fi
+
