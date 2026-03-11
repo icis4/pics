@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo "--- Step 1: Installing dependencies ---"
+sudo apt-get install wget gpg apt-transport-https -y
+
+echo "--- Step 2: Downloading Microsoft GPG key ---"
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+
+echo "--- Step 3: Installing the key into the system ---"
+sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+
+echo "--- Step 4: Adding the repository ---"
+sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+
+echo "--- Step 5: Cleaning up temporary files ---"[cite: 1]
+rm packages.microsoft.gpg[cite: 1]
+
+echo "--- Step 6: Updating and installing VS Code ---"[cite: 1]
+sudo apt-get update[cite: 1]
+sudo apt-get install code -y[cite: 1]
+
+echo "✅ Done! Visual Studio Code is installed."[cite: 1]
